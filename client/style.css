@@ -1,0 +1,111 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  color: #333;
+}
+
+/* Title */
+.title {
+  text-align: center;
+  color: white;
+  margin-top: 40px;
+  font-size: 40px;
+  letter-spacing: 2px;
+}
+
+/* Cards (index page) */
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 60px;
+}
+
+.card {
+  background: white;
+  padding: 30px;
+  width: 220px;
+  text-align: center;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 6px;
+  background: #2a5298;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #1e3c72;
+}
+
+/* Login Page */
+form {
+  width: 350px;
+  margin: 100px auto;
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 15px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+/* Navbar (admin/faculty/student) */
+.navbar {
+  background: #1e3c72;
+  color: white;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin: 40px;
+}
+
+.card-container .card {
+  width: 200px;
+  cursor: pointer;
+}
+
+/* Table */
+table {
+  width: 80%;
+  margin: 30px auto;
+  border-collapse: collapse;
+  background: white;
+}
+
+th, td {
+  padding: 12px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+th {
+  background: #2a5298;
+  color: white;
+}
