@@ -1,24 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
 <body>
-  <div class="container">
-    <h1 class="title">Welcome to Secure Exam Portal</h1>
-
-    <div class="cards">
-      <div class="card">
-        <h2>Admin</h2>
-        <button onclick="goLogin('admin')">Login as Admin</button>
-      </div>
-
-      <div class="card">
-        <h2>Faculty</h2>
-        <button onclick="goLogin('faculty')">Login as Faculty</button>
-      </div>
-
-      <div class="card">
-        <h2>Student</h2>
-        <button onclick="goLogin('student')">Login as Student</button>
-      </div>
-    </div>
+  <div class="sidebar">
+    <h2>EXAM GUARD</h2>
+    <p id="roleTitle"></p>
+    <button onclick="logout()">Logout</button>
   </div>
 
-  <script src="script.js"></script>
+  <div class="main">
+    <h1 id="welcome"></h1>
+    <div id="content"></div>
+  </div>
+
+  <script src="js/script.js"></script>
 </body>
+</html>

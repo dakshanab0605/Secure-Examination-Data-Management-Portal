@@ -1,22 +1,33 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Login</title>
-  <link rel="stylesheet" href="style.css">
+    <title>Exam Guard</title>
+    <link rel="stylesheet" href="./style.css">
 </head>
-<body class="center">
+<body>
 
-  <div class="login-box">
-    <h2 id="roleTitle">LOGIN</h2>
+<div class="container">
+    <div class="card">
+        <h1>Exam Guard</h1>
+        <p class="subtitle">Secure Examination Management Portal</p>
 
-    <form id="loginForm">
-      <input type="text" id="username" placeholder="Username" required>
-      <input type="password" id="password" placeholder="Password" required>
+        <h2>Login to your account</h2>
 
-      <button type="submit">Login</button>
-    </form>
-  </div>
+        <!-- ROLE BASED BUTTONS -->
+        <button class="btn" onclick="goToAuth('admin')">
+            Continue as Administrator
+        </button>
 
-  <script src="script.js"></script>
+        <button class="btn" onclick="goToAuth('faculty')">
+            Continue as Faculty
+        </button>
+
+        <button class="btn primary" onclick="goToAuth('student')">
+            Continue as Student
+        </button>
+    </div>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>

@@ -1,56 +1,49 @@
-// Go to login with role
-function goLogin(role) {
-  localStorage.setItem("role", role);
-  window.location.href = "login.html";
-}
-
-// Set title on login page
+// -----------------------------
+// ROLE FROM URL (auth.html)
+// -----------------------------
 window.onload = function () {
-  const role = localStorage.getItem("role");
-  const title = document.getElementById("roleTitle");
+    const params = new URLSearchParams(window.location.search);
+    const role = params.get("role");
 
-  if (title && role) {
-    title.innerText = role.toUpperCase() + " LOGIN";
-  }
+    if (role) {
+        localStorage.setItem("role", role);
+
+        const title = document.getElementById("roleTitle");
+        if (title) {
+            title.innerText =
+                "Login as " + role.charAt(0).toUpperCase() + role.slice(1);
+        }
+    }
 };
 
-// Login submit
+// -----------------------------
+// LOGIN FORM (auth.html)
+// -----------------------------
 const form = document.getElementById("loginForm");
 
 if (form) {
-  form.addEventListener("submit", async function (e) {
-    e.preventDefault();
+    form.addEventListener("submit", function (e) {
+        e.preventDefault();
 
-    const username = document.getElementById("username").value;
-    const password = document.getElementById("password").value;
-    const role = localStorage.getItem("role");
+        const role = localStorage.getItem("role");
+        const username = document.getElementById("username").value;
+        const password = document.getElementById("password").value;
 
-    const res = await fetch("http://localhost:5000/login", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ username, password, role }),
+        if (username === "" || password === "") {
+            alert("Enter username and password");
+            return;
+        }
+
+        // Redirect based on role
+        if (role === "admin") {
+            window.location.href = "admin-dashboard.html";
+        } else if (role === "faculty") {
+            window.location.href = "faculty-dashboard.html";
+        } else if (role === "student") {
+            window.location.href = "student-dashboard.html";
+        } else {
+            alert("Role missing. Go back.");
+            window.location.href = "index.html";
+        }
     });
-
-    const data = await res.json();
-
-    if (data.success) {
-      localStorage.setItem("user", username);
-
-      if (role === "admin") {
-        window.location.href = "admin.html";
-      } else if (role === "faculty") {
-        window.location.href = "faculty.html";
-      } else {
-        window.location.href = "student.html";
-      }
-    } else {
-      alert("Invalid credentials");
-    }
-  });
-}
-
-// Logout
-function logout() {
-  localStorage.clear();
-  window.location.href = "dashboard.html";
 }
