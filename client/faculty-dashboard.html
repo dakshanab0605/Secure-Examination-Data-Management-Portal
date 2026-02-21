@@ -1,67 +1,97 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Faculty Dashboard</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>Faculty Dashboard - Exam Guard</title>
+    <link rel="stylesheet" href="faculty.css">
 </head>
+
 <body>
 
-<div class="layout">
+<div class="container">
 
     <!-- Sidebar -->
     <div class="sidebar">
         <h2 class="logo">EXAM GUARD</h2>
+
+        <p class="menu-title">MAIN MENU</p>
         <a href="#">Dashboard</a>
         <a href="#">Create Exam</a>
+
+        <p class="menu-title">SETTINGS</p>
         <a href="#">Profile</a>
-        <a href="login.html">Logout</a>
+        <a href="#">Logout</a>
+
+        <div class="faculty-info">
+            <p class="name">Demo faculty</p>
+            <p class="role">FACULTY</p>
+        </div>
     </div>
 
     <!-- Main Content -->
     <div class="main">
+
+        <!-- Top Bar -->
         <div class="topbar">
-            <h1>Welcome back, Faculty</h1>
-            <button class="primary-btn">+ Create New Exam</button>
+            <h3>Exam Management Portal</h3>
+            <button class="create-btn">+ Create New Exam</button>
         </div>
 
-        <!-- Cards -->
-        <div class="cards">
-            <div class="card-box">
-                <h3>Total Exams</h3>
-                <p>2</p>
+        <h1>Welcome back, Demo faculty</h1>
+        <p class="subtitle">Here's what's happening with your exams today.</p>
+
+        <!-- Stats -->
+        <div class="stats">
+            <div class="card">
+                <p>Total Exams</p>
+                <h2>2</h2>
+                <small class="green">System Ready</small>
             </div>
-            <div class="card-box">
-                <h3>Total Questions</h3>
-                <p>3</p>
+
+            <div class="card">
+                <p>Total Questions</p>
+                <h2>3</h2>
             </div>
-            <div class="card-box">
-                <h3>Active Students</h3>
-                <p>124</p>
+
+            <div class="card">
+                <p>Active Students</p>
+                <h2>124</h2>
             </div>
-            <div class="card-box">
-                <h3>Security Status</h3>
-                <p>Protected</p>
+
+            <div class="card">
+                <p>Security Status</p>
+                <h2>Protected</h2>
+                <small>End-to-end encrypted</small>
             </div>
         </div>
 
-        <!-- Exams List -->
-        <h2>Available Examinations</h2>
+        <!-- Exams -->
+        <h2 class="section-title">Available Examinations</h2>
 
-        <div class="exam-list">
+        <div class="exam-container">
+
             <div class="exam-card">
                 <h3>Fundamentals of Computer Science</h3>
-                <p>30 mins • 2 Questions</p>
-                <button>View Details</button>
+                <p>Basic concepts of hardware, software, and networking.</p>
+                <div class="exam-footer">
+                    <span>30 mins • 2 Questions</span>
+                    <button>View Details</button>
+                </div>
             </div>
 
             <div class="exam-card">
                 <h3>Advanced Web Technologies</h3>
-                <p>45 mins • 1 Question</p>
-                <button>View Details</button>
+                <p>Modern frontend frameworks and backend integration.</p>
+                <div class="exam-footer">
+                    <span>45 mins • 1 Question</span>
+                    <button>View Details</button>
+                </div>
             </div>
+
         </div>
 
     </div>
+
 </div>
 
 </body>

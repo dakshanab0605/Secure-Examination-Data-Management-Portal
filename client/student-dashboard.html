@@ -1,54 +1,68 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Student Dashboard</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>Student Dashboard - Exam Guard</title>
+    <link rel="stylesheet" href="student.css">
 </head>
+
 <body>
 
-<div class="layout">
+<div class="container">
 
     <!-- Sidebar -->
     <div class="sidebar">
         <h2 class="logo">EXAM GUARD</h2>
+
         <a href="#">Dashboard</a>
-        <a href="login.html">Logout</a>
+        <a href="#">Logout</a>
     </div>
 
     <!-- Main Content -->
     <div class="main">
+
+        <!-- Top Header -->
         <div class="topbar">
-            <h1>Welcome, Student</h1>
+            <h3>Exam Management Portal</h3>
+            <p class="user">Demo STUDENT (STUDENT)</p>
         </div>
 
-        <!-- Status Cards -->
-        <div class="cards">
-            <div class="card-box">
-                <h3>Available Exams</h3>
-                <p>1</p>
+        <h1>Welcome, Demo STUDENT</h1>
+        <p class="subtitle">Secure exam monitoring is active.</p>
+
+        <!-- Stats -->
+        <div class="stats">
+            <div class="card">
+                <p>Available Exams</p>
+                <h2>1</h2>
             </div>
-            <div class="card-box">
-                <h3>Completed</h3>
-                <p>0</p>
+
+            <div class="card">
+                <p>Completed</p>
+                <h2>0</h2>
             </div>
-            <div class="card-box">
-                <h3>System Status</h3>
-                <p>Protected</p>
+
+            <div class="card">
+                <p>System Status</p>
+                <h2 class="status">● PROTECTED</h2>
             </div>
         </div>
 
-        <!-- Assignment -->
-        <h2>Current Assignment</h2>
+        <!-- Assignments -->
+        <h2 class="section-title">Current Assignments</h2>
 
-        <div class="exam-list">
-            <div class="exam-card">
-                <h3>Fundamentals of Computer Science</h3>
-                <p>30 mins</p>
+        <div class="assignment-card">
+            <h3>Fundamentals of Computer Science</h3>
+            <p>Basic concepts of hardware, software, and networking.</p>
+
+            <div class="assignment-footer">
+                <span>30m</span>
                 <button>Start</button>
             </div>
         </div>
 
     </div>
+
 </div>
 
 </body>

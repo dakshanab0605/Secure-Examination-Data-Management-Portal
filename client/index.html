@@ -1,22 +1,45 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Exam Guard</title>
-  <link rel="stylesheet" href="css/style.css">
+    <title>Exam Guard</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body class="center">
-  <div class="card">
-    <h1>Exam Guard</h1>
-    <h3>Login to your account</h3>
+<body>
 
-<button class="btn" onclick="selectRole('admin')">Continue as Administrator</button>
-<button class="btn" onclick="selectRole('faculty')">Continue as Faculty</button>
-<button class="btn primary" onclick="selectRole('student')">Continue as Student</button>
+<div class="main-container">
 
-<script src="script.js"></script>
+    <div class="logo-section">
+        <div class="logo-icon">🛡️</div>
+        <h1>Exam Guard</h1>
+        <p>Secure Examination Management Portal</p>
+    </div>
 
-  </div>
+    <div class="card">
+        <h2>Login to your account</h2>
 
-  <script src="js/script.js"></script>
+        <!-- ADMIN -->
+        <button onclick="location.href='auth.html?role=admin'" class="btn">
+            Continue as Administrator
+        </button>
+
+        <!-- FACULTY -->
+        <button onclick="location.href='auth.html?role=faculty'" class="btn">
+            Continue as Faculty
+        </button>
+
+        <!-- STUDENT -->
+        <button onclick="location.href='auth.html?role=student'" class="btn primary">
+            Continue as Student
+        </button>
+
+        <p class="terms">
+            By logging in, you agree to our
+            <a href="#">Security Protocol</a> and
+            <a href="#">Privacy Policy</a>.
+        </p>
+    </div>
+
+</div>
+
 </body>
 </html>
